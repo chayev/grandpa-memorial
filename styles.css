@@ -54,3 +54,14 @@ button:hover{background:#a38f5f}
 /* Uploadcare widget full width */
 .uploadcare--widget, .uploadcare--button { width:100% !important; }
 .uploadcare--button { border-radius:10px !important; padding:12px 16px !important; font-weight:700 !important; }
+
+/* Inline form status messages */
+.form-status { margin-top:14px; text-align:center; }
+.form-status .success{
+  background:#e7f6ec; color:#245e36; border:1px solid #b7e1c0;
+  padding:12px; border-radius:10px;
+}
+.form-status .error{
+  background:#fdecec; color:#7a1f1f; border:1px solid #f2b6b6;
+  padding:12px; border-radius:10px;
+}

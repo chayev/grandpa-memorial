@@ -45,7 +45,7 @@
 
   <main class="page">
     <h1>RSVP for the Memorial</h1>
-    <form action="https://formspree.io/f/myzbzawa" method="POST">
+    <form action="https://formspree.io/f/myzbzawa" method="POST" data-ajax="formspree">
       <input type="text" name="_gotcha" style="display:none" aria-hidden="true">
       <label for="name">Full Name</label>
       <input id="name" name="name" required>
@@ -55,10 +55,12 @@
       <input id="guests" name="guests" type="number" min="1" value="1" required>
       <label for="message">Notes (dietary needs, etc.)</label>
       <textarea id="message" name="message" rows="3"></textarea>
+    
+      <!-- Optional email tweaks still work -->
       <input type="hidden" name="_subject" value="Memorial RSVP">
-      <input type="hidden" name="_template" value="table">
-      <input type="hidden" name="_redirect" value="thanks.html">
+    
       <button type="submit">Submit RSVP</button>
+      <div class="form-status" aria-live="polite"></div>
     </form>
 
     <div class="footer"><a href="index.html">← Back to Home</a></div>

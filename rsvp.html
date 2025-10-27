@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>RSVP • Ilya Gadayev Memorial</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <meta name="description" content="RSVP for the memorial service of Ilya Gadayev." />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Open+Sans&display=swap" rel="stylesheet">
+  <style>
+    body{font-family:'Open Sans',sans-serif;background:#f9f7f4;color:#222;margin:0}
+    .container{max-width:600px;margin:40px auto;background:#fff;padding:40px;border-radius:8px;box-shadow:0 0 10px rgba(0,0,0,.08)}
+    h1{text-align:center;font-family:'Playfair Display',serif;margin-bottom:20px}
+    form{background:#f3efe7;padding:20px;border-radius:8px}
+    label{display:block;margin-top:10px;font-weight:700}
+    input,textarea,button{width:100%;padding:10px;margin-top:6px;border:1px solid #ccc;border-radius:6px;font-family:'Open Sans',sans-serif}
+    button{background:#bda76b;color:#fff;border:none;font-weight:700;cursor:pointer}
+    button:hover{background:#a38f5f}
+    .back{text-align:center;margin-top:20px}
+    .back a{color:#bda76b;text-decoration:none;font-weight:700}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>RSVP for the Memorial</h1>
+    <form action="https://formspree.io/f/myzbzawa" method="POST">
+      <input type="text" name="_gotcha" style="display:none">
+      <label for="name">Full Name</label>
+      <input id="name" name="name" required>
+      <label for="email">Email Address</label>
+      <input id="email" name="email" type="email" required>
+      <label for="guests">Number of Guests</label>
+      <input id="guests" name="guests" type="number" min="1" value="1" required>
+      <label for="message">Notes (dietary needs, etc.)</label>
+      <textarea id="message" name="message" rows="3"></textarea>
+      <input type="hidden" name="_subject" value="Memorial RSVP">
+      <input type="hidden" name="_template" value="table">
+      <input type="hidden" name="_redirect" value="thanks.html">
+      <button type="submit">Submit RSVP</button>
+    </form>
+    <div class="back">
+      <p><a href="index.html">← Back to Home</a> · <a href="submit-photo.html">Submit a Photo</a></p>
+    </div>
+  </div>
+</body>
+</html>

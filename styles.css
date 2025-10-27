@@ -1,0 +1,56 @@
+:root { --bg:#f9f7f4; --card:#fff; --ink:#222; --muted:#666; --accent:#bda76b; }
+*,*::before,*::after{ box-sizing:border-box; }
+
+body{font-family:'Open Sans',sans-serif;background:var(--bg);color:var(--ink);margin:0}
+
+/* Shared wrapper */
+.page{max-width:720px;margin:20px auto 48px;background:var(--card);
+      padding:40px;border-radius:12px;box-shadow:0 0 10px rgba(0,0,0,.08)}
+h1,h2{font-family:'Playfair Display',serif;margin:8px 0 10px;text-align:center}
+p{text-align:center;line-height:1.6}
+.lead{color:var(--muted);margin-top:2px}
+.footer{font-size:13px;color:var(--muted);text-align:center;margin-top:24px}
+.btn{display:inline-block;padding:12px 24px;border-radius:10px;font-weight:700;
+     text-decoration:none;color:#fff;background:var(--accent)}
+.btn:hover{background:#a38f5f}
+
+/* Header / hamburger nav (pure CSS) */
+.site-header{max-width:900px;margin:16px auto 0;padding:0 16px; position:relative; z-index:2;}
+.navbar{background:var(--card);border-radius:12px;box-shadow:0 1px 8px rgba(0,0,0,.06);
+        padding:10px 14px;display:flex;align-items:center;justify-content:space-between}
+.brand{font-weight:700;text-decoration:none;color:var(--ink)}
+.nav-links{display:flex;gap:18px;align-items:center}
+.nav-links a{text-decoration:none;color:var(--ink)}
+.nav-toggle{display:none}
+.burger{display:none;width:40px;height:40px;border-radius:8px;border:1px solid #e6e1d6;
+        align-items:center;justify-content:center;background:#f5f1ea;cursor:pointer}
+.burger svg{width:22px;height:22px}
+
+/* Mobile menu */
+@media (max-width:720px){
+  .burger{display:flex}
+  .nav-links{
+    position:absolute; left:0; right:0; top:66px; margin:0 auto; width:min(92vw,650px);
+    background:var(--card); border-radius:12px; box-shadow:0 10px 24px rgba(0,0,0,.12);
+    display:none; flex-direction:column; gap:0; overflow:hidden
+  }
+  .nav-links a{ padding:14px 16px; width:100%; border-top:1px solid #eee }
+  #nav-toggle:checked ~ .nav-links{ display:flex }
+  .page{ margin:20px 16px 32px; padding:28px; }
+}
+
+/* Home portrait */
+.photo{text-align:center}
+.photo img{border:3px solid var(--accent);border-radius:4px;width:250px;height:auto}
+
+/* Forms */
+form{background:#f3efe7;padding:20px;border-radius:12px}
+label{display:block;margin-top:12px;font-weight:700}
+input,textarea,button{width:100%;max-width:100%;padding:12px;margin-top:6px;
+  border:1px solid #ccc;border-radius:10px;font-size:16px;font-family:'Open Sans',sans-serif}
+button{background:var(--accent);color:#fff;border:none;font-weight:700;cursor:pointer}
+button:hover{background:#a38f5f}
+
+/* Uploadcare widget full width */
+.uploadcare--widget, .uploadcare--button { width:100% !important; }
+.uploadcare--button { border-radius:10px !important; padding:12px 16px !important; font-weight:700 !important; }
